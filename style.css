@@ -1,0 +1,786 @@
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263445;
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #142b49;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background-color: #142b49;
+    padding: 18px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    color: #ffffff;
+}
+
+.logo h2 {
+    color: #d6ac55;
+    font-size: 25px;
+    margin: 0;
+}
+
+.logo p {
+    color: #ffffff;
+    font-size: 12px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d6ac55;
+}
+
+/* HERO SECTION */
+#hero {
+    min-height: 520px;
+    background:
+        linear-gradient(rgba(20, 43, 73, 0.72),
+        rgba(20, 43, 73, 0.72)),
+        url("images/school-campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #b88b32;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+#hero h1 {
+    color: #ffffff;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d6ac55;
+    color: #142b49;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #edc978;
+}
+
+/* INTRODUCTION */
+.intro {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.intro p:not(.eyebrow) {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* FEATURES */
+.features {
+    background-color: #f7f3ea;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.feature-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px 22px;
+    border-radius: 8px;
+    border: 1px solid #e8e1d5;
+    text-align: left;
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+}
+
+/* ACADEMIC PROGRAMMES */
+.academics {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.programme-grid {
+    display: flex;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.programme-card {
+    flex: 1;
+    padding: 30px 22px;
+    border: 1px solid #e4e4e4;
+    border-top: 4px solid #d6ac55;
+    border-radius: 7px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.programme-card h3 {
+    margin-bottom: 12px;
+}
+
+.text-link {
+    display: inline-block;
+    color: #142b49;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.text-link:hover {
+    color: #b88b32;
+}
+
+/* ADMISSIONS BANNER */
+.admissions-banner {
+    background-color: #142b49;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.admissions-banner h2 {
+    color: #ffffff;
+}
+
+.admissions-banner p {
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #101f33;
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    padding-bottom: 30px;
+}
+
+.footer-content h3 {
+    color: #d6ac55;
+    margin-bottom: 15px;
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content a {
+    color: #ffffff;
+}
+
+.footer-content a:hover {
+    color: #d6ac55;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #405066;
+    padding: 18px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #hero {
+        min-height: 450px;
+        padding: 50px 6%;
+    }
+
+    #hero h1 {
+        font-size: 34px;
+    }
+
+    .feature-grid,
+    .programme-grid,
+    .footer-content {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+}
+
+/* ABOUT US PAGE */
+
+.page-banner {
+    background-color: #f7f3ea;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.page-banner h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-text,
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.mission-section {
+    background-color: #f7f3ea;
+    padding: 70px 0;
+}
+
+.mission-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.mission-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 35px;
+    border-left: 4px solid #d6ac55;
+    border-radius: 7px;
+}
+
+.values-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.values-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.value-card {
+    flex: 1 1 220px;
+    padding: 25px;
+    border: 1px solid #e4e4e4;
+    border-radius: 7px;
+}
+
+.principal-section {
+    background-color: #f7f3ea;
+    padding: 70px 0;
+}
+
+.principal-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.principal-image {
+    flex: 1;
+}
+
+.principal-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.principal-content > div:last-child {
+    flex: 1;
+}
+
+.school-gallery {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ABOUT PAGE MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    .about-section,
+    .mission-grid,
+    .principal-content,
+    .gallery-grid {
+        flex-direction: column;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+    }
+
+    .page-banner h1 {
+        font-size: 32px;
+    }
+}
+
+/* ACADEMICS PAGE */
+
+.academic-intro {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.academic-intro p:not(.eyebrow) {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.academic-level {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #e8e1d5;
+}
+
+.academic-image,
+.academic-details {
+    flex: 1;
+}
+
+.academic-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.academic-details h2 {
+    margin-bottom: 15px;
+}
+
+.academic-details h3 {
+    margin: 20px 0 10px;
+}
+
+.academic-details ul {
+    padding-left: 22px;
+}
+
+.academic-details li {
+    margin-bottom: 8px;
+}
+
+.learning-approach {
+    background-color: #f7f3ea;
+    text-align: center;
+    padding: 75px 0;
+    margin-top: 50px;
+}
+
+.approach-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.approach-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px 22px;
+    border-radius: 8px;
+    border: 1px solid #e8e1d5;
+    text-align: left;
+}
+
+.approach-card h3 {
+    margin-bottom: 12px;
+}
+
+/* ACADEMICS MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    .academic-level {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .approach-grid {
+        flex-direction: column;
+    }
+
+    .academic-image img {
+        height: 260px;
+    }
+}
+
+/* ADMISSIONS PAGE */
+
+.admission-intro {
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.admission-intro p:not(.eyebrow) {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.requirements-section {
+    background-color: #f7f3ea;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.requirements-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.requirement-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px 22px;
+    border-radius: 8px;
+    border-top: 4px solid #d6ac55;
+    text-align: left;
+}
+
+.requirement-card h3 {
+    margin-bottom: 15px;
+}
+
+.requirement-card ul {
+    padding-left: 20px;
+}
+
+.requirement-card li {
+    margin-bottom: 10px;
+}
+
+.application-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.application-steps {
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+.application-steps li {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+}
+
+.application-steps h3 {
+    margin-bottom: 8px;
+}
+
+.documents-section {
+    background-color: #f7f3ea;
+    padding: 70px 0;
+}
+
+.document-list {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.document-list li {
+    margin-bottom: 12px;
+}
+
+.enquiry-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.enquiry-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.school-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #f7f3ea;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #142b49;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d6ac55;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.school-form button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-note {
+    max-width: 700px;
+    margin: 15px auto 0;
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+}
+
+/* ADMISSIONS MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    .requirements-grid {
+        flex-direction: column;
+    }
+
+    .school-form {
+        padding: 22px;
+    }
+}
+
+/* CONTACT PAGE */
+
+.contact-intro {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.contact-intro p:not(.eyebrow) {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-information {
+    background-color: #f7f3ea;
+    padding: 65px 0;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 25px;
+}
+
+.contact-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    border-top: 4px solid #d6ac55;
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+}
+
+.opening-hours {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.opening-hours > div {
+    flex: 1;
+}
+
+.hours-card {
+    background-color: #f7f3ea;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.hours-card p {
+    padding: 10px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.hours-card p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.directions-section {
+    background-color: #142b49;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.directions-section h2 {
+    color: #ffffff;
+}
+
+.directions-section p:not(.eyebrow) {
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+.contact-form-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-form-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* CONTACT MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    .contact-grid,
+    .opening-hours {
+        flex-direction: column;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+}
